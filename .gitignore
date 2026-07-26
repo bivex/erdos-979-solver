@@ -2,3 +2,4 @@ node_modules/
 dist/
 erdos979_cpp
 .DS_Store
+erdos979_arm64_bench
