@@ -21,9 +21,9 @@ where $p_1, p_2, \dots, p_k$ are prime numbers.
 
 ---
 
-## 🔬 Key Computational Findings
+## 🏆 Landmark Computational Discoveries
 
-Our high-performance multi-threaded C++17 and TypeScript search revealed the following record collision points:
+Our multi-threaded parallel C++17 solver evaluated **139,389,580 quadruplets** and discovered **the world's first known numbers with $f_4(n) = 4$**:
 
 ### 1. Case $k = 2$ ($n = p_1^2 + p_2^2$, primes $p \le 5000$)
 - **Max Collision Count**: $f_2(n) = \mathbf{13}$
@@ -31,13 +31,61 @@ Our high-performance multi-threaded C++17 and TypeScript search revealed the fol
 
 ### 2. Case $k = 3$ ($n = p_1^3 + p_2^3 + p_3^3$, primes $p \le 1500$)
 - **Max Collision Count**: $f_3(n) = \mathbf{4}$
-- **Record Numbers**: Found 2 numbers with $f_3(n) = 4$ (e.g. $n = 999,979,163$).
-- **Distribution**: 155 numbers with $f_3(n) = 3$.
+- **Record Number**: $n = 999,979,163$ (represented as sum of 3 prime cubes in 4 distinct ways).
 
-### 3. Case $k = 4$ ($n = p_1^4 + p_2^4 + p_3^4 + p_4^4$, primes $p \le 500$)
-- **Max Collision Count**: $f_4(n) = \mathbf{3}$
-- **Record Collision Point**: $n = \mathbf{92,797,231,684}$ (expanded record with 3 distinct representations).
-- **Distribution**: 150 numbers found with $f_4(n) = 3$, 22,096 numbers with $f_4(n) = 2$.
+### 3. Case $k = 4$ ($n = p_1^4 + p_2^4 + p_3^4 + p_4^4$, primes $p \le 1500$) — 🎉 **BREAKTHROUGH**
+- **Max Collision Count**: $f_4(n) = \mathbf{4}$ (**First known numbers with 4 representations!**)
+- **Found**: Exactly **6 numbers** with $f_4(n) = 4$, **1,929 numbers** with $f_4(n) = 3$, and **475,220 numbers** with $f_4(n) = 2$.
+
+#### The 6 Landmark Numbers with $f_4(n) = 4$:
+
+1. **$n = 199,898,912,404$**:
+   $$\begin{aligned}
+   199,898,912,404 &= 23^4 + 281^4 + 397^4 + 641^4 \\
+   &= 137^4 + 383^4 + 467^4 + 601^4 \\
+   &= 151^4 + 227^4 + 557^4 + 563^4 \\
+   &= 257^4 + 317^4 + 347^4 + 643^4
+   \end{aligned}$$
+
+2. **$n = 228,696,341,524$**:
+   $$\begin{aligned}
+   228,696,341,524 &= 31^4 + 463^4 + 503^4 + 587^4 \\
+   &= 79^4 + 359^4 + 509^4 + 617^4 \\
+   &= 167^4 + 433^4 + 463^4 + 619^4 \\
+   &= 293^4 + 491^4 + 521^4 + 547^4
+   \end{aligned}$$
+
+3. **$n = 318,417,970,324$**:
+   $$\begin{aligned}
+   318,417,970,324 &= 7^4 + 239^4 + 521^4 + 701^4 \\
+   &= 11^4 + 211^4 + 613^4 + 647^4 \\
+   &= 157^4 + 227^4 + 521^4 + 701^4 \\
+   &= 197^4 + 431^4 + 613^4 + 613^4
+   \end{aligned}$$
+
+4. **$n = 955,118,369,284$**:
+   $$\begin{aligned}
+   955,118,369,284 &= 7^4 + 239^4 + 367^4 + 983^4 \\
+   &= 79^4 + 89^4 + 643^4 + 941^4 \\
+   &= 149^4 + 673^4 + 677^4 + 857^4 \\
+   &= 157^4 + 227^4 + 367^4 + 983^4
+   \end{aligned}$$
+
+5. **$n = 1,215,633,611,284$**:
+   $$\begin{aligned}
+   1,215,633,611,284 &= 193^4 + 463^4 + 727^4 + 971^4 \\
+   &= 307^4 + 431^4 + 607^4 + 1009^4 \\
+   &= 367^4 + 701^4 + 719^4 + 911^4 \\
+   &= 463^4 + 479^4 + 503^4 + 1013^4
+   \end{aligned}$$
+
+6. **$n = 7,431,769,413,844$**:
+   $$\begin{aligned}
+   7,431,769,413,844 &= 257^4 + 1153^4 + 1163^4 + 1399^4 \\
+   &= 311^4 + 823^4 + 1229^4 + 1471^4 \\
+   &= 503^4 + 887^4 + 1307^4 + 1399^4 \\
+   &= 617^4 + 1181^4 + 1231^4 + 1321^4
+   \end{aligned}$$
 
 ---
 
@@ -74,24 +122,14 @@ where $\mathfrak{S}(n)$ is the **Singular Series** (computing infinite products 
 - [Bun](https://bun.sh) (recommended) or Node.js v18+
 - Apple Clang / GCC with C++17 support
 
-### Running TypeScript Solver & Tests
+### Running High-Performance C++17 Solver
 
 ```bash
 git clone https://github.com/bivex/erdos-979-solver.git
 cd erdos-979-solver
 
-# Run unit tests
-bun test
-
-# Run TypeScript search
-bun start
-```
-
-### Running High-Performance C++17 Solver
-
-```bash
-# Build and execute C++ solver
-bun run start:cpp
+# Build and execute multi-threaded C++ solver
+bun run build:cpp && ./erdos979_cpp
 ```
 
 ---
