@@ -1,0 +1,4 @@
+node_modules/
+dist/
+erdos979_cpp
+.DS_Store

@@ -1,0 +1,28 @@
+{
+  "name": "erdos-979-solver",
+  "version": "1.0.0",
+  "description": "High-performance solver & computational study of Erdős Problem #979 (limsup f_k(n) = infinity for sums of k k-th powers of primes)",
+  "main": "dist/index.js",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node",
+    "test": "bun test",
+    "start": "bun run src/index.ts",
+    "build:cpp": "clang++ -std=c++17 -O3 cpp/erdos979.cpp -o erdos979_cpp",
+    "start:cpp": "bun run build:cpp && ./erdos979_cpp"
+  },
+  "keywords": [
+    "erdos-problem",
+    "erdos-979",
+    "number-theory",
+    "prime-powers",
+    "computational-math"
+  ],
+  "author": "Bivex",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}
