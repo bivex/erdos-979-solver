@@ -23,21 +23,21 @@ where $p_1, p_2, \dots, p_k$ are prime numbers.
 
 ## 🔬 Key Computational Findings
 
-Our high-performance C++17 and TypeScript search revealed the following record collision points:
+Our high-performance multi-threaded C++17 and TypeScript search revealed the following record collision points:
 
-### 1. Case $k = 2$ ($n = p_1^2 + p_2^2$, primes $p \le 2000$)
-- **Max Collision Count**: $f_2(n) = \mathbf{8}$
-- **Record Number**: $n = 3,179,930$ (represented as sum of 2 prime squares in 8 distinct ways).
+### 1. Case $k = 2$ ($n = p_1^2 + p_2^2$, primes $p \le 5000$)
+- **Max Collision Count**: $f_2(n) = \mathbf{13}$
+- **Record Number**: $n = 9,549,410$ (represented as sum of 2 prime squares in 13 distinct ways).
 
-### 2. Case $k = 3$ ($n = p_1^3 + p_2^3 + p_3^3$, primes $p \le 400$)
-- **Max Collision Count**: $f_3(n) = \mathbf{3}$
-- **Record Numbers**: Exactly 6 numbers found with $f_3(n) = 3$ (e.g. $n = 36,901,493$).
-- **Distribution**: 643 numbers with $f_3(n) = 2$.
+### 2. Case $k = 3$ ($n = p_1^3 + p_2^3 + p_3^3$, primes $p \le 1500$)
+- **Max Collision Count**: $f_3(n) = \mathbf{4}$
+- **Record Numbers**: Found 2 numbers with $f_3(n) = 4$ (e.g. $n = 999,979,163$).
+- **Distribution**: 155 numbers with $f_3(n) = 3$.
 
-### 3. Case $k = 4$ ($n = p_1^4 + p_2^4 + p_3^4 + p_4^4$, primes $p \le 150$)
+### 3. Case $k = 4$ ($n = p_1^4 + p_2^4 + p_3^4 + p_4^4$, primes $p \le 500$)
 - **Max Collision Count**: $f_4(n) = \mathbf{3}$
-- **Record Collision Point**: $n = \mathbf{141,339,844}$ (first known record for $k=4$ with 3 distinct representations).
-- **Distribution**: 439 numbers with $f_4(n) = 2$.
+- **Record Collision Point**: $n = \mathbf{92,797,231,684}$ (expanded record with 3 distinct representations).
+- **Distribution**: 150 numbers found with $f_4(n) = 3$, 22,096 numbers with $f_4(n) = 2$.
 
 ---
 
