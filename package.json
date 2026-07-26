@@ -11,6 +11,8 @@
     "start": "bun run src/index.ts",
     "build:cpp": "clang++ -std=c++17 -O3 cpp/erdos979.cpp -o erdos979_cpp",
     "start:cpp": "bun run build:cpp && ./erdos979_cpp",
+    "build:k3": "clang++ -std=c++17 -O3 -arch arm64 cpp/erdos979_k3_record.cpp -o erdos979_k3_record",
+    "start:k3": "bun run build:k3 && ./erdos979_k3_record",
     "build:arm64": "clang++ -std=c++17 -O3 -arch arm64 cpp/erdos979_arm64.s cpp/erdos979_arm64_bench.cpp -o erdos979_arm64_bench",
     "start:arm64": "bun run build:arm64 && ./erdos979_arm64_bench"
   },
