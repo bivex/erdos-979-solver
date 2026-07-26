@@ -20,7 +20,8 @@
     "build:metal": "clang++ -std=c++17 -O3 -framework Metal -framework Foundation cpp/erdos979_metal.mm -o erdos979_metal",
     "start:metal": "bun run build:metal && ./erdos979_metal",
     "build:erdos1035": "clang++ -std=c++17 -O3 -framework Metal -framework Foundation cpp/erdos1035_metal.mm -o erdos1035_engine",
-    "start:erdos1035": "bun run build:erdos1035 && ./erdos1035_engine"
+    "start:erdos1035": "bun run build:erdos1035 && ./erdos1035_engine",
+    "start:erdos1035:layer": "clang++ -std=c++17 -O3 -framework Metal -framework Foundation cpp/erdos1035_layer_metal.mm -o erdos1035_layer_metal && ./erdos1035_layer_metal"
   },
   "keywords": [
     "erdos-problem",
