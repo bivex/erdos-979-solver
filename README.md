@@ -41,6 +41,32 @@ Our high-performance C++17 and TypeScript search revealed the following record c
 
 ---
 
+## 🛠 Advanced Automated Proving & Computational Stack
+
+To resolve Erdős Problem #979 completely, arithmetic calculators are insufficient. A full solution requires integrating advanced automated theorem provers and computer algebra systems:
+
+### 1. 🤖 Interactive Proof Assistants (Formal Logic Verification)
+- **Tools**: Lean 4, Coq, Isabelle/HOL
+- **Role**: Machine-verify every logical deduction down to foundational axioms. With standard analytic number theory libraries (Hardy-Littlewood method, prime distribution) formalized in Lean 4, a formal proof of $\limsup_{n \to \infty} f_k(n) = \infty$ can be rigorously checked.
+
+### 2. 🧮 Computer Algebra Systems (Symbolic Mathematics & CAS)
+- **Tools**: SageMath, Wolfram Mathematica, Maple
+- **Role**: In analytic number theory, $f_k(n)$ is estimated via the **Hardy-Littlewood Circle Method**:
+
+$$f_k(n) \sim \mathfrak{S}(n) \cdot \frac{\Gamma(1 + 1/k)^k}{\Gamma(1)} \cdot \frac{n^{k/k - 1}}{(\ln n)^k}$$
+
+where $\mathfrak{S}(n)$ is the **Singular Series** (computing infinite products of $p$-adic densities across prime moduli $p$). CAS engines compute these $p$-adic densities to identify maximal values of $\mathfrak{S}(n)$.
+
+### 3. ⚡ SMT Solvers & Automated Theorem Provers
+- **Tools**: Z3 Solver, CVC5, Vampire
+- **Role**: Check first-order logic formulas for modular constraints and obstructions, identifying why collisions occur at higher frequencies for specific residue classes.
+
+### 4. 💻 Massive SAT Solvers (Counterexample Search)
+- **Tools**: CaDiCaL, Glucose, GPU/TPU clusters
+- **Role**: If the conjecture were false (bounded above), SAT solvers would construct constraint graphs to search for or rule out finite counterexamples.
+
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
