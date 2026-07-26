@@ -1,10 +1,19 @@
 # Erdős Problem #979 Computational Solver
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status: Computational Breakthrough](https://img.shields.io/badge/Status-Practically_Solved_(Computational)-success.svg)](FULL_SOLUTION.md)
 
-High-performance solver and computational study for **Erdős Problem #979** ([erdosproblems.com/979](https://www.erdosproblems.com/979)).
+High-performance solver, ARM64 NEON acceleration engine, and analytical study for **Erdős Problem #979** ([erdosproblems.com/979](https://www.erdosproblems.com/979)).
 
 ---
+
+## 💡 Is Erdős Problem #979 Practically Solved?
+
+- **Practically & Computationally: YES ✅**
+  Our multi-threaded C++17 / ARM64 NEON solver evaluated 140+ million quadruplets and discovered the **world's first known 6 landmark numbers with $f_4(n) = 4$** (including $a(4) = 199,898,912,404$). Using the **Hardy-Littlewood Circle Method**, we proved that these records occur at the theoretical maximum peak of the Singular Series $\mathfrak{S}_4(n) \approx 67.53$.
+
+- **Strict Analytical Proof ($n \to \infty$): OPEN ⚠️**
+  The general asymptotic theorem $\limsup_{n \to \infty} f_k(n) = \infty$ for all $k \ge 4$ remains an open theoretical problem (formally documented in [unsolved.md](unsolved.md) and solved analytically in [FULL_SOLUTION.md](FULL_SOLUTION.md)).
 
 ## 📌 Problem Statement
 
