@@ -18,7 +18,9 @@
     "build:arm64": "clang++ -std=c++17 -O3 -arch arm64 cpp/erdos979_arm64.s cpp/erdos979_arm64_bench.cpp -o erdos979_arm64_bench",
     "start:arm64": "bun run build:arm64 && ./erdos979_arm64_bench",
     "build:metal": "clang++ -std=c++17 -O3 -framework Metal -framework Foundation cpp/erdos979_metal.mm -o erdos979_metal",
-    "start:metal": "bun run build:metal && ./erdos979_metal"
+    "start:metal": "bun run build:metal && ./erdos979_metal",
+    "build:erdos1035": "clang++ -std=c++17 -O3 cpp/erdos1035_metal.mm -o erdos1035_engine",
+    "start:erdos1035": "bun run build:erdos1035 && ./erdos1035_engine"
   },
   "keywords": [
     "erdos-problem",
