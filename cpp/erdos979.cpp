@@ -98,9 +98,9 @@ int main() {
     std::cout << "[k = 3] Primes <= 1000 (" << primes3.size() << " primes) [" << ms3 << " ms]:\n";
     std::cout << "  Record: Max f_3(n) = " << maxF3 << " at n = " << maxN3 << "\n\n";
 
-    // 3. k = 4 (Primes <= 400) - Multi-threaded
+    // 3. k = 4 (Primes <= 1500) - Multi-threaded
     t1 = std::chrono::high_resolution_clock::now();
-    auto primes4 = getPrimes(400);
+    auto primes4 = getPrimes(1500);
     std::vector<long long> q4;
     for (auto p : primes4) q4.push_back(p * p * p * p);
 
@@ -152,8 +152,18 @@ int main() {
     t2 = std::chrono::high_resolution_clock::now();
     double ms4 = std::chrono::duration<double, std::milli>(t2 - t1).count();
 
-    std::cout << "[k = 4] Primes <= 400 (" << primes4.size() << " primes, " << numThreads << " threads) [" << ms4 << " ms]:\n";
-    std::cout << "  Record: Max f_4(n) = " << maxF4 << " at n = " << maxN4 << "\n";
+    std::cout << "[k = 4] Primes <= 1500 (" << primes4.size() << " primes, " << numThreads << " threads) [" << std::fixed << std::setprecision(1) << ms4 << " ms]:\n";
+    std::cout << "  Record: Max f_4(n) = " << maxF4 << "\n";
+    std::cout << "  Distribution of f_4(n): f_4=4 (" << freq4[4] << " nums), f_4=3 (" << freq4[3] << " nums), f_4=2 (" << freq4[2] << " nums)\n";
+    
+    if (freq4[4] > 0) {
+        std::cout << "\n  🏆 Found " << freq4[4] << " landmark numbers with f_4(n) = 4:\n";
+        for (const auto& kv : counts4) {
+            if (kv.second >= 4) {
+                std::cout << "    - n = " << kv.first << " (f_4 = " << kv.second << ")\n";
+            }
+        }
+    }
     std::cout << "=========================================================================\n";
 
     auto t_end = std::chrono::high_resolution_clock::now();
