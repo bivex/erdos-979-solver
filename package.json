@@ -10,6 +10,7 @@
     "test": "bun test",
     "start": "bun run src/index.ts",
     "verify:proof": "bun run src/formal_proof_verifier.ts",
+    "verify:z3": "python3 src/z3_solver.py",
     "build:cpp": "clang++ -std=c++17 -O3 cpp/erdos979.cpp -o erdos979_cpp",
     "start:cpp": "bun run build:cpp && ./erdos979_cpp",
     "build:k3": "clang++ -std=c++17 -O3 -arch arm64 cpp/erdos979_k3_record.cpp -o erdos979_k3_record",
